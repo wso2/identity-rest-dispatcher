@@ -35,13 +35,13 @@
     </description>
     <url>http://wso2.org</url>
 
-    <!--<scm>-->
-        <!--<url>https://github.com/wso2-extensions/identity-user-account-association.git</url>-->
-        <!--<developerConnection>scm:git:https://github.com/wso2-extensions/identity-user-account-association.git-->
-        <!--</developerConnection>-->
-        <!--<connection>scm:git:https://github.com/wso2-extensions/identity-user-account-association.git</connection>-->
-        <!--<tag>HEAD</tag>-->
-    <!--</scm>-->
+    <scm>
+        <url>https://github.com/wso2/identity-rest-dispatcher.git</url>
+        <developerConnection>scm:git:https://github.com/wso2/identity-rest-dispatcher.git
+        </developerConnection>
+        <connection>scm:git:https://github.com/wso2/identity-rest-dispatcher.git</connection>
+        <tag>HEAD</tag>
+    </scm>
 
     <repositories>
         <repository>
@@ -318,7 +318,6 @@
         <org.apache.felix.annotations.version>1.2.4</org.apache.felix.annotations.version>
         <identity.user.api.version>1.0.0-SNAPSHOT</identity.user.api.version>
         <identity.server.api.version>1.0.0-SNAPSHOT</identity.server.api.version>
-        <!--<carbon.identity.framework.version>5.12.401</carbon.identity.framework.version>-->
     </properties>
 
     <modules>
@@ -326,8 +325,3 @@
     </modules>
 
 </project>
-
-
-
-
-
