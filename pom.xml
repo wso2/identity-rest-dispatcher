@@ -221,6 +221,12 @@
                 <artifactId>org.wso2.carbon.identity.api.server.challenge.common</artifactId>
                 <version>${identity.server.api.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.api</groupId>
+                <artifactId>org.wso2.carbon.identity.rest.api.dispatcher</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -323,6 +329,7 @@
 
     <modules>
         <module>components/org.wso2.carbon.identity.api.dispatcher</module>
+        <module>features/org.wso2.carbon.identity.api.dispatcher.feature</module>
     </modules>
 
 </project>
