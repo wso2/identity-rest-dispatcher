@@ -97,5 +97,5 @@ folder exists in the location, remove it before restarting)
     ```
     Sample Request:
     ```
-        curl -X GET "https://localhost:9443/api/server/v1/challenges" -H "accept: application/json" -H -k
+        curl -X GET "https://localhost:9443/api/server/v1/challenges" -H "accept: application/json" -k
     ```

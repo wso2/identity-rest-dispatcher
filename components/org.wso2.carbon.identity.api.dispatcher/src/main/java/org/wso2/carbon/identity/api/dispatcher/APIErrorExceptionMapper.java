@@ -53,17 +53,28 @@ public class APIErrorExceptionMapper implements ExceptionMapper<WebApplicationEx
             Object response = ((APIError) e).getResponseEntity();
             Response.Status status = getHttpsStatusCode(((APIError) e).getCode(), ((APIError) e).getStatus());
 
-            if (response != null) {
-                return Response.status(status)
-                        .entity(response)
-                        .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON).build();
-            } else {
-                return Response.status(status)
-                        .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON).build();
-            }
+            return buildResponse(response, status);
+
+        } else if (e instanceof org.wso2.carbon.identity.api.server.common.error.APIError) {
+            Object response = ((org.wso2.carbon.identity.api.server.common.error.APIError) e).getResponseEntity();
+            Response.Status status = getHttpsStatusCode(((org.wso2.carbon.identity.api.server.common.error.APIError)
+                    e).getCode(), ((org.wso2.carbon.identity.api.server.common.error.APIError) e).getStatus());
+
+            return buildResponse(response, status);
 
         }
 
         return e.getResponse();
+    }
+
+    private Response buildResponse(Object response, Response.Status status) {
+        if (response != null) {
+            return Response.status(status)
+                    .entity(response)
+                    .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON).build();
+        } else {
+            return Response.status(status)
+                    .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON).build();
+        }
     }
 }
