@@ -28,7 +28,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>identity-api-dispatcher</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>0.1.0-SNAPSHOT</version>
     <name>WSO2 Identity API Dispatcher Module</name>
     <description>
 
@@ -324,6 +324,7 @@
         <org.apache.felix.annotations.version>1.2.4</org.apache.felix.annotations.version>
         <identity.user.api.version>1.0.0-SNAPSHOT</identity.user.api.version>
         <identity.server.api.version>1.0.0-SNAPSHOT</identity.server.api.version>
+        <carbon.p2.plugin.version>1.5.3</carbon.p2.plugin.version>
         <!--<carbon.identity.framework.version>5.12.401</carbon.identity.framework.version>-->
     </properties>
 
