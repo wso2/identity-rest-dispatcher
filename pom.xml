@@ -24,7 +24,7 @@
         <version>1</version>
     </parent>
 
-    <groupId>org.wso2.carbon.identity.api</groupId>
+    <groupId>org.wso2.carbon.identity.rest.dispatcher</groupId>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>identity-api-dispatcher</artifactId>
     <packaging>pom</packaging>
@@ -222,7 +222,7 @@
                 <version>${identity.server.api.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.wso2.carbon.identity.api</groupId>
+                <groupId>org.wso2.carbon.identity.rest.dispatcher</groupId>
                 <artifactId>org.wso2.carbon.identity.rest.api.dispatcher</artifactId>
                 <version>${project.version}</version>
                 <type>war</type>
