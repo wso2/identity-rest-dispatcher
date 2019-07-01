@@ -1,13 +1,13 @@
 # identity-api-dispatcher
 
-Aggregates the API implementations from [identity-user-api](https://github.com/wso2/identity-api-user/) and 
-[identity-server-api](https://github.com/wso2/identity-api-server/) builds a single webapp inorder to expose the 
+Aggregates the API implementations from [identity-api-user](https://github.com/wso2/identity-api-user/) and 
+[identity-api-server](https://github.com/wso2/identity-api-server/) builds a single webapp inorder to expose the 
 multiple API endpoints in WSO2 Identity Server. 
 
-*  Refer [identity-user-api](https://github.com/wso2/identity-api-user/) repository for the implementation 
+*  Refer [identity-api-user](https://github.com/wso2/identity-api-user/) repository for the implementation 
 of user APIs
 
-*  Refer [identity-server-api](https://github.com/ayshsandu/identity-server-api/) repository for the implementation 
+*  Refer [identity-api-server](https://github.com/ayshsandu/identity-api-server/) repository for the implementation 
 of server APIs
 
 #### Exposing a new API
@@ -30,8 +30,8 @@ of server APIs
     │       │               └── web.xml
     ```
     
-4. Add the API implementation from [identity-user-api](https://github.com/wso2/identity-api-user/) or 
-[identity-server-api](https://github.com/wso2/identity-api-server/) under the corresponding `server` tag.
+4. Add the API implementation from [identity-api-user](https://github.com/wso2/identity-api-user/) or 
+[identity-api-server](https://github.com/wso2/identity-api-server/) under the corresponding `server` tag.
 
     ```
     <jaxrs:server id="server" address="/server/v1">
