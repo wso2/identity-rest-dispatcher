@@ -16,13 +16,16 @@
 
 package org.wso2.carbon.identity.api.dispatcher;
 
-        import com.fasterxml.jackson.core.JsonParseException;
-        import org.apache.commons.logging.Log;
-        import org.apache.commons.logging.LogFactory;
+import com.fasterxml.jackson.core.JsonParseException;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
-        import javax.ws.rs.core.Response;
-        import javax.ws.rs.ext.ExceptionMapper;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.ext.ExceptionMapper;
 
+/**
+ * Handle invalid request body parsing issues.
+ */
 public class JsonMappingExceptionMapper implements ExceptionMapper<JsonParseException> {
 
     private static final Log log = LogFactory.getLog(JsonMappingExceptionMapper.class);
