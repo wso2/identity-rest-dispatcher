@@ -322,8 +322,8 @@
         <junit.version>4.12</junit.version>
         <maven.buildnumber.plugin.version>1.4</maven.buildnumber.plugin.version>
         <org.apache.felix.annotations.version>1.2.4</org.apache.felix.annotations.version>
-        <identity.user.api.version>1.0.0</identity.user.api.version>
-        <identity.server.api.version>1.0.0</identity.server.api.version>
+        <identity.user.api.version>1.0.2</identity.user.api.version>
+        <identity.server.api.version>1.0.3</identity.server.api.version>
         <carbon.p2.plugin.version>1.5.3</carbon.p2.plugin.version>
         <maven.findbugsplugin.version>3.0.4</maven.findbugsplugin.version>
     </properties>
