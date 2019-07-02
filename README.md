@@ -1,5 +1,9 @@
 # identity-api-dispatcher
 
+|  Branch | Build Status |
+| :------------ |:------------- |
+| master      | [![Build Status](https://wso2.org/jenkins/job/platform-builds/job/identity-rest-dispatcher/badge/icon)](https://wso2.org/jenkins/job/platform-builds/job/identity-rest-dispatcher/) |
+
 Aggregates the API implementations from [identity-api-user](https://github.com/wso2/identity-api-user/) and 
 [identity-api-server](https://github.com/wso2/identity-api-server/) builds a single webapp inorder to expose the 
 multiple API endpoints in WSO2 Identity Server. 
