@@ -26,9 +26,13 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
 
+/**
+ * Handles all the unhandled server errors, (ex:NullPointer).
+ * Sends a default error response.
+ */
 public class DefaultExceptionMapper implements ExceptionMapper<Throwable> {
     private static final Log log = LogFactory.getLog(DefaultExceptionMapper.class);
-    public static final String PROCESSING_ERROR_CODE = "SE-10000";
+    public static final String PROCESSING_ERROR_CODE = "SE-50000";
     public static final String PROCESSING_ERROR_MESSAGE = "Unexpected Processing Error.";
     public static final String PROCESSING_ERROR_DESCRIPTION = "Server encountered an error while serving the request.";
 

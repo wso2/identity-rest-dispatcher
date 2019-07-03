@@ -27,6 +27,10 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
 
+/**
+ * Handles exceptions when an incorrect json requests body is received.
+ * Sends a default error response.
+ */
 public class JsonProcessingExceptionMapper implements ExceptionMapper<JsonProcessingException> {
 
     private static final Log log = LogFactory.getLog(JsonProcessingExceptionMapper.class);
@@ -36,8 +40,9 @@ public class JsonProcessingExceptionMapper implements ExceptionMapper<JsonProces
 
     @Override
     public Response toResponse(JsonProcessingException e) {
-
-        log.debug("Provided JSON request content is not in the valid format:",e);
+        if (log.isDebugEnabled()) {
+            log.debug("Provided JSON request content is not in the valid format:", e);
+        }
         ErrorDTO errorDTO = new ErrorResponse.Builder().withCode(ERROR_CODE)
                 .withMessage(ERROR_MESSAGE)
                 .withDescription(ERROR_DESCRIPTION).build();

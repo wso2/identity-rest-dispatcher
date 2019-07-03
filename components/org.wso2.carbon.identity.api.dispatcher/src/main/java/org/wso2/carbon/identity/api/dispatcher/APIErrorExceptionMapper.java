@@ -62,7 +62,6 @@ public class APIErrorExceptionMapper implements ExceptionMapper<WebApplicationEx
             return buildResponse(response, status);
 
         }
-
         return e.getResponse();
     }
 
