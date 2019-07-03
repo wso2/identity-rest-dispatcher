@@ -18,16 +18,19 @@ package org.wso2.carbon.identity.api.dispatcher;
 
 import org.wso2.carbon.identity.api.user.common.error.APIError;
 
+import java.util.ResourceBundle;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
-import java.util.ResourceBundle;
 
+/**
+ * Map API Error status codes.
+ */
 public class APIErrorExceptionMapper implements ExceptionMapper<WebApplicationException> {
 
-    static String BUNDLE = "ErrorMappings";
+    static final String BUNDLE = "ErrorMappings";
     static ResourceBundle resourceBundle = ResourceBundle.getBundle(BUNDLE);
 
     public static Response.Status getHttpsStatusCode(String errorCode, Response.Status defaultStatus) {
@@ -35,11 +38,7 @@ public class APIErrorExceptionMapper implements ExceptionMapper<WebApplicationEx
         Response.Status mappedStatus = null;
         try {
             String statusCodeValue = resourceBundle.getString(errorCode);
-            if (statusCodeValue != null) {
-
-                mappedStatus = Response.Status.fromStatusCode(Integer.parseInt(statusCodeValue));
-
-            }
+            mappedStatus = Response.Status.fromStatusCode(Integer.parseInt(statusCodeValue));
         } catch (Throwable e) {
             //Ignore if error mapping has invalid input
         }
