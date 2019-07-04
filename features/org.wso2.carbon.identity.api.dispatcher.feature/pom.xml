@@ -21,7 +21,7 @@
     <parent>
         <artifactId>identity-api-dispatcher</artifactId>
         <groupId>org.wso2.carbon.identity.rest.dispatcher</groupId>
-        <version>0.1.7-SNAPSHOT</version>
+        <version>0.1.7</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
