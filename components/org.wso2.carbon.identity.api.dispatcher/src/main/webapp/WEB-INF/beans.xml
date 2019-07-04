@@ -39,8 +39,8 @@
         <jaxrs:serviceBeans>
             <bean class="org.wso2.carbon.identity.rest.api.user.association.v1.UsersApi"/>
             <bean class="org.wso2.carbon.identity.rest.api.user.challenge.v1.UserIdApi"/>
-            <bean class="org.wso2.carbon.identity.api.user.authorized.apps.v1.UserIdApi"/>
-            <bean class="org.wso2.carbon.identity.api.user.authorized.apps.v1.MeApi"/>
+            <bean class="org.wso2.carbon.identity.rest.api.user.authorized.apps.v1.UserIdApi"/>
+            <bean class="org.wso2.carbon.identity.rest.api.user.authorized.apps.v1.MeApi"/>
             <bean class="org.wso2.carbon.identity.rest.api.user.challenge.v1.MeApi"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
