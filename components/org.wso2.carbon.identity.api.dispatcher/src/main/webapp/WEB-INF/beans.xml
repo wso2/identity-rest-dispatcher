@@ -39,6 +39,7 @@
     <jaxrs:server id="users" address="/users/v1">
         <jaxrs:serviceBeans>
             <bean class="org.wso2.carbon.identity.rest.api.user.association.v1.UsersApi"/>
+            <bean class="org.wso2.carbon.identity.rest.api.user.association.v1.MeApi"/>
             <bean class="org.wso2.carbon.identity.rest.api.user.challenge.v1.UserIdApi"/>
             <bean class="org.wso2.carbon.identity.rest.api.user.authorized.apps.v1.UserIdApi"/>
             <bean class="org.wso2.carbon.identity.rest.api.user.authorized.apps.v1.MeApi"/>
