@@ -140,6 +140,14 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-xml</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.wso2.carbon.identity.user.api</groupId>
             <artifactId>org.wso2.carbon.identity.api.user.challenge.common</artifactId>
         </dependency>
@@ -170,6 +178,14 @@
         <dependency>
             <groupId>org.wso2.carbon.identity.server.api</groupId>
             <artifactId>org.wso2.carbon.identity.rest.api.server.challenge.v1</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon.identity.user.api</groupId>
+            <artifactId>org.wso2.carbon.identity.api.user.approval.common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon.identity.user.api</groupId>
+            <artifactId>org.wso2.carbon.identity.rest.api.user.approval.v1</artifactId>
         </dependency>
     </dependencies>
 
