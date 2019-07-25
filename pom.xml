@@ -21,14 +21,14 @@
     <parent>
         <groupId>org.wso2</groupId>
         <artifactId>wso2</artifactId>
-        <version>1</version>
+        <version>5</version>
     </parent>
 
     <groupId>org.wso2.carbon.identity.rest.dispatcher</groupId>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>identity-api-dispatcher</artifactId>
     <packaging>pom</packaging>
-    <version>0.1.2-SNAPSHOT</version>
+    <version>0.1.18-SNAPSHOT</version>
     <name>WSO2 Identity API Dispatcher Module</name>
     <description>
 
@@ -181,6 +181,16 @@
                 <version>${jackson-jaxrs-json-provider.version}</version>
             </dependency>
             <dependency>
+                <groupId>com.fasterxml.jackson.dataformat</groupId>
+                <artifactId>jackson-dataformat-xml</artifactId>
+                <version>${jackson-databind.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson-databind.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>org.apache.felix.scr.ds-annotations</artifactId>
                 <version>${org.apache.felix.annotations.version}</version>
@@ -207,6 +217,11 @@
                 <version>${identity.user.api.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.wso2.carbon.identity.user.api</groupId>
+                <artifactId>org.wso2.carbon.identity.rest.api.user.authorized.apps.v1</artifactId>
+                <version>${identity.user.api.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.wso2.carbon.identity.server.api</groupId>
                 <artifactId>org.wso2.carbon.identity.api.server.common</artifactId>
                 <version>${identity.server.api.version}</version>
@@ -219,6 +234,16 @@
             <dependency>
                 <groupId>org.wso2.carbon.identity.server.api</groupId>
                 <artifactId>org.wso2.carbon.identity.api.server.challenge.common</artifactId>
+                <version>${identity.server.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.server.api</groupId>
+                <artifactId>org.wso2.carbon.identity.rest.api.server.claim.management.v1</artifactId>
+                <version>${identity.server.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.server.api</groupId>
+                <artifactId>org.wso2.carbon.identity.api.server.claim.management.common</artifactId>
                 <version>${identity.server.api.version}</version>
             </dependency>
             <dependency>
@@ -237,6 +262,16 @@
                 <version>${project.version}</version>
                 <type>war</type>
             </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.user.api</groupId>
+                <artifactId>org.wso2.carbon.identity.api.user.approval.common</artifactId>
+                <version>${identity.user.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.user.api</groupId>
+                <artifactId>org.wso2.carbon.identity.rest.api.user.approval.v1</artifactId>
+                <version>${identity.user.api.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -246,7 +281,7 @@
                 <plugin>
                     <groupId>org.apache.felix</groupId>
                     <artifactId>maven-scr-plugin</artifactId>
-                    <version>1.7.2</version>
+                    <version>1.24.0</version>
                     <executions>
                         <execution>
                             <id>generate-scr-scrdescriptor</id>
@@ -307,8 +342,8 @@
                 <inherited>true</inherited>
                 <configuration>
                     <encoding>UTF-8</encoding>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -333,8 +368,9 @@
         <maven.buildnumber.plugin.version>1.4</maven.buildnumber.plugin.version>
         <org.apache.felix.annotations.version>1.2.4</org.apache.felix.annotations.version>
         <identity.user.api.version>1.0.17-SNAPSHOT</identity.user.api.version>
-        <identity.server.api.version>1.0.0</identity.server.api.version>
+        <identity.server.api.version>1.0.11</identity.server.api.version>
         <carbon.p2.plugin.version>1.5.3</carbon.p2.plugin.version>
+        <maven.findbugsplugin.version>3.0.4</maven.findbugsplugin.version>
     </properties>
 
     <modules>

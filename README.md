@@ -1,8 +1,8 @@
 # identity-api-dispatcher
 
-|  Branch | Build Status |
-| :------------ |:------------- |
-| master      | [![Build Status](https://wso2.org/jenkins/job/platform-builds/job/identity-rest-dispatcher/badge/icon)](https://wso2.org/jenkins/job/platform-builds/job/identity-rest-dispatcher/) |
+|  Branch | Build Status | Travis CI Status |
+| :------------ |:------------- |:-------------
+| master      | [![Build Status](https://wso2.org/jenkins/job/platform-builds/job/identity-rest-dispatcher/badge/icon)](https://wso2.org/jenkins/job/platform-builds/job/identity-rest-dispatcher/) | [![Travis CI Status](https://travis-ci.org/wso2/identity-rest-dispatcher.svg?branch=master)](https://travis-ci.org/wso2/identity-rest-dispatcher?branch=master)|
 
 Aggregates the API implementations from [identity-api-user](https://github.com/wso2/identity-api-user/) and 
 [identity-api-server](https://github.com/wso2/identity-api-server/) builds a single webapp inorder to expose the 
