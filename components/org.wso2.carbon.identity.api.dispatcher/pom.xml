@@ -203,6 +203,10 @@
             <groupId>org.wso2.carbon.identity.user.api</groupId>
             <artifactId>org.wso2.carbon.identity.rest.api.user.session.v1</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon.identity.server.api</groupId>
+            <artifactId>org.wso2.carbon.identity.rest.api.server.workflow.engine.v1</artifactId>
+        </dependency>
     </dependencies>
 
 </project>
