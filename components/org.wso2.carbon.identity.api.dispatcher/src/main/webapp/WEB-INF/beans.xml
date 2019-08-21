@@ -33,7 +33,6 @@
         <jaxrs:serviceBeans>
             <bean class="org.wso2.carbon.identity.rest.api.server.challenge.v1.ChallengesApi"/>
             <bean class="org.wso2.carbon.identity.rest.api.server.claim.management.v1.ClaimManagementApi"/>
-            <bean class="org.wso2.carbon.identity.rest.api.server.workflow.engine.v1.WorkflowEnginesApi"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
