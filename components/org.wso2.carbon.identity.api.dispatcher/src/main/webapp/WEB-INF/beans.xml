@@ -30,6 +30,11 @@
     <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer"/>
     <bean class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer"/>
     <bean id="postprocess" class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+    <bean id="validationProvider" class="org.apache.cxf.validation.BeanValidationProvider" />
+    <bean id="validationInInterceptor"
+          class="org.apache.cxf.jaxrs.validation.JAXRSBeanValidationInInterceptor">
+        <property name="provider" ref="validationProvider"/>
+    </bean>
     <jaxrs:server id="server" address="/server/v1">
         <jaxrs:serviceBeans>
             <bean class="org.wso2.carbon.identity.rest.api.server.challenge.v1.ChallengesApi"/>
@@ -39,8 +44,12 @@
             <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
             <bean class="org.wso2.carbon.identity.api.dispatcher.JsonProcessingExceptionMapper"/>
             <bean class="org.wso2.carbon.identity.api.dispatcher.APIErrorExceptionMapper"/>
+            <bean class="org.wso2.carbon.identity.api.dispatcher.InputValidationExceptionMapper"/>
             <bean class="org.wso2.carbon.identity.api.dispatcher.DefaultExceptionMapper"/>
         </jaxrs:providers>
+        <jaxrs:inInterceptors>
+            <ref bean="validationInInterceptor"/>
+        </jaxrs:inInterceptors>
     </jaxrs:server>
     <jaxrs:server id="users" address="/users/v1">
         <jaxrs:serviceBeans>
@@ -60,7 +69,11 @@
             <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
             <bean class="org.wso2.carbon.identity.api.dispatcher.JsonProcessingExceptionMapper"/>
             <bean class="org.wso2.carbon.identity.api.dispatcher.APIErrorExceptionMapper"/>
+            <bean class="org.wso2.carbon.identity.api.dispatcher.InputValidationExceptionMapper"/>
             <bean class="org.wso2.carbon.identity.api.dispatcher.DefaultExceptionMapper"/>
         </jaxrs:providers>
+        <jaxrs:inInterceptors>
+            <ref bean="validationInInterceptor"/>
+        </jaxrs:inInterceptors>
     </jaxrs:server>
 </beans>

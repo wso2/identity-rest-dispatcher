@@ -283,6 +283,11 @@
                 <artifactId>org.wso2.carbon.identity.rest.api.user.fido2.v1</artifactId>
                 <version>${identity.user.api.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.hibernate.validator</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>6.0.17.Final</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
