@@ -11,7 +11,7 @@ multiple API endpoints in WSO2 Identity Server.
 *  Refer [identity-api-user](https://github.com/wso2/identity-api-user/) repository for the implementation 
 of user APIs
 
-*  Refer [identity-api-server](https://github.com/ayshsandu/identity-api-server/) repository for the implementation 
+*  Refer [identity-api-server](https://github.com/wso2/identity-api-server/) repository for the implementation 
 of server APIs
 
 #### Exposing a new API
