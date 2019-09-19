@@ -200,6 +200,14 @@
             <artifactId>org.wso2.carbon.identity.rest.api.user.fido2.v1</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.wso2.carbon.identity.user.api</groupId>
+            <artifactId>org.wso2.carbon.identity.rest.api.user.totp.v1</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon.identity.user.api</groupId>
+            <artifactId>org.wso2.carbon.identity.rest.api.user.totp.common</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.wso2.carbon.identity.server.api</groupId>
             <artifactId>org.wso2.carbon.identity.api.server.claim.management.common</artifactId>
         </dependency>
