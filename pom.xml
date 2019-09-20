@@ -28,7 +28,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>identity-api-dispatcher</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.7-SNAPSHOT</version>
+    <version>1.0.7</version>
     <name>WSO2 Identity API Dispatcher Module</name>
     <description>
 
@@ -40,7 +40,7 @@
         <developerConnection>scm:git:https://github.com/wso2/identity-rest-dispatcher.git
         </developerConnection>
         <connection>scm:git:https://github.com/wso2/identity-rest-dispatcher.git</connection>
-        <tag>HEAD</tag>
+        <tag>v1.0.7</tag>
     </scm>
 
     <repositories>
