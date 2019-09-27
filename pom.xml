@@ -298,6 +298,16 @@
                 <artifactId>hibernate-validator</artifactId>
                 <version>6.0.17.Final</version>
             </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.server.api</groupId>
+                <artifactId>org.wso2.carbon.identity.rest.api.server.email.template.v1</artifactId>
+                <version>${identity.server.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.server.api</groupId>
+                <artifactId>org.wso2.carbon.identity.api.server.email.template.common</artifactId>
+                <version>${identity.server.api.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
