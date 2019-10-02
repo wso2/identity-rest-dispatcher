@@ -223,14 +223,14 @@
             <groupId>org.wso2.carbon.identity.server.api</groupId>
             <artifactId>org.wso2.carbon.identity.rest.api.server.workflow.engine.v1</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon.identity.server.api</groupId>
-            <artifactId>org.wso2.carbon.identity.rest.api.server.email.template.v1</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon.identity.server.api</groupId>
-            <artifactId>org.wso2.carbon.identity.api.server.email.template.common</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.wso2.carbon.identity.server.api</groupId>-->
+<!--            <artifactId>org.wso2.carbon.identity.rest.api.server.email.template.v1</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.wso2.carbon.identity.server.api</groupId>-->
+<!--            <artifactId>org.wso2.carbon.identity.api.server.email.template.common</artifactId>-->
+<!--        </dependency>-->
     </dependencies>
 
 </project>
