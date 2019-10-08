@@ -16,7 +16,8 @@
   ~ specific language governing permissions and limitations
   ~ under the License.
   -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <parent>
         <groupId>org.wso2</groupId>
@@ -196,6 +197,8 @@
                 <version>${org.apache.felix.annotations.version}</version>
                 <scope>provided</scope>
             </dependency>
+
+            <!-- User REST API Dependencies. -->
             <dependency>
                 <groupId>org.wso2.carbon.identity.user.api</groupId>
                 <artifactId>org.wso2.carbon.identity.api.user.common</artifactId>
@@ -222,6 +225,28 @@
                 <version>${identity.user.api.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.wso2.carbon.identity.user.api</groupId>
+                <artifactId>org.wso2.carbon.identity.rest.api.user.session.v1</artifactId>
+                <version>${identity.user.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.user.api</groupId>
+                <artifactId>org.wso2.carbon.identity.api.user.session.common</artifactId>
+                <version>${identity.user.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.user.api</groupId>
+                <artifactId>org.wso2.carbon.identity.rest.api.user.approval.v1</artifactId>
+                <version>${identity.user.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.user.api</groupId>
+                <artifactId>org.wso2.carbon.identity.api.user.approval.common</artifactId>
+                <version>${identity.user.api.version}</version>
+            </dependency>
+
+            <!-- Server REST API Dependencies. -->
+            <dependency>
                 <groupId>org.wso2.carbon.identity.server.api</groupId>
                 <artifactId>org.wso2.carbon.identity.api.server.common</artifactId>
                 <version>${identity.server.api.version}</version>
@@ -247,37 +272,17 @@
                 <version>${identity.server.api.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.wso2.carbon.identity.user.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.user.session.common</artifactId>
-                <version>${identity.user.api.version}</version>
+                <groupId>org.wso2.carbon.identity.server.api</groupId>
+                <artifactId>org.wso2.carbon.identity.rest.api.server.workflow.engine.v1</artifactId>
+                <version>${identity.server.api.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.user.api</groupId>
-                <artifactId>org.wso2.carbon.identity.rest.api.user.session.v1</artifactId>
-                <version>${identity.user.api.version}</version>
-            </dependency>
+
             <dependency>
                 <groupId>org.wso2.carbon.identity.rest.dispatcher</groupId>
                 <artifactId>org.wso2.carbon.identity.rest.api.dispatcher</artifactId>
                 <version>${project.version}</version>
                 <type>war</type>
             </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.user.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.user.approval.common</artifactId>
-                <version>${identity.user.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.user.api</groupId>
-                <artifactId>org.wso2.carbon.identity.rest.api.user.approval.v1</artifactId>
-                <version>${identity.user.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.rest.api.server.workflow.engine.v1</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-
             <dependency>
                 <groupId>org.wso2.carbon.identity.user.api</groupId>
                 <artifactId>org.wso2.carbon.identity.rest.api.user.fido2.v1</artifactId>
@@ -298,16 +303,16 @@
                 <artifactId>hibernate-validator</artifactId>
                 <version>6.0.17.Final</version>
             </dependency>
-<!--            <dependency>-->
-<!--                <groupId>org.wso2.carbon.identity.server.api</groupId>-->
-<!--                <artifactId>org.wso2.carbon.identity.rest.api.server.email.template.v1</artifactId>-->
-<!--                <version>${identity.server.api.version}</version>-->
-<!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>org.wso2.carbon.identity.server.api</groupId>-->
-<!--                <artifactId>org.wso2.carbon.identity.api.server.email.template.common</artifactId>-->
-<!--                <version>${identity.server.api.version}</version>-->
-<!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>org.wso2.carbon.identity.server.api</groupId>-->
+            <!--                <artifactId>org.wso2.carbon.identity.rest.api.server.email.template.v1</artifactId>-->
+            <!--                <version>${identity.server.api.version}</version>-->
+            <!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>org.wso2.carbon.identity.server.api</groupId>-->
+            <!--                <artifactId>org.wso2.carbon.identity.api.server.email.template.common</artifactId>-->
+            <!--                <version>${identity.server.api.version}</version>-->
+            <!--            </dependency>-->
         </dependencies>
     </dependencyManagement>
 
@@ -405,7 +410,7 @@
         <maven.buildnumber.plugin.version>1.4</maven.buildnumber.plugin.version>
         <org.apache.felix.annotations.version>1.2.4</org.apache.felix.annotations.version>
         <identity.user.api.version>1.0.50</identity.user.api.version>
-        <identity.server.api.version>1.0.25</identity.server.api.version>
+        <identity.server.api.version>1.0.26</identity.server.api.version>
         <carbon.p2.plugin.version>1.5.3</carbon.p2.plugin.version>
         <maven.findbugsplugin.version>3.0.4</maven.findbugsplugin.version>
     </properties>

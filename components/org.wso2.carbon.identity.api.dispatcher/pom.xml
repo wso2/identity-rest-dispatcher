@@ -151,10 +151,8 @@
             <groupId>org.hibernate.validator</groupId>
             <artifactId>hibernate-validator</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon.identity.user.api</groupId>
-            <artifactId>org.wso2.carbon.identity.api.user.challenge.common</artifactId>
-        </dependency>
+
+        <!-- User REST API Dependencies. -->
         <dependency>
             <groupId>org.wso2.carbon.identity.user.api</groupId>
             <artifactId>org.wso2.carbon.identity.api.user.common</artifactId>
@@ -165,6 +163,10 @@
         </dependency>
         <dependency>
             <groupId>org.wso2.carbon.identity.user.api</groupId>
+            <artifactId>org.wso2.carbon.identity.api.user.challenge.common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon.identity.user.api</groupId>
             <artifactId>org.wso2.carbon.identity.rest.api.user.association.v1</artifactId>
         </dependency>
         <dependency>
@@ -172,28 +174,12 @@
             <artifactId>org.wso2.carbon.identity.rest.api.user.authorized.apps.v1</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.wso2.carbon.identity.server.api</groupId>
-            <artifactId>org.wso2.carbon.identity.api.server.challenge.common</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon.identity.server.api</groupId>
-            <artifactId>org.wso2.carbon.identity.api.server.common</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon.identity.server.api</groupId>
-            <artifactId>org.wso2.carbon.identity.rest.api.server.challenge.v1</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon.identity.user.api</groupId>
-            <artifactId>org.wso2.carbon.identity.api.user.approval.common</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.wso2.carbon.identity.user.api</groupId>
             <artifactId>org.wso2.carbon.identity.rest.api.user.approval.v1</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.wso2.carbon.identity.server.api</groupId>
-            <artifactId>org.wso2.carbon.identity.rest.api.server.claim.management.v1</artifactId>
+            <groupId>org.wso2.carbon.identity.user.api</groupId>
+            <artifactId>org.wso2.carbon.identity.api.user.approval.common</artifactId>
         </dependency>
         <dependency>
             <groupId>org.wso2.carbon.identity.user.api</groupId>
@@ -208,29 +194,47 @@
             <artifactId>org.wso2.carbon.identity.rest.api.user.totp.common</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.wso2.carbon.identity.server.api</groupId>
-            <artifactId>org.wso2.carbon.identity.api.server.claim.management.common</artifactId>
+            <groupId>org.wso2.carbon.identity.user.api</groupId>
+            <artifactId>org.wso2.carbon.identity.rest.api.user.session.v1</artifactId>
         </dependency>
         <dependency>
             <groupId>org.wso2.carbon.identity.user.api</groupId>
             <artifactId>org.wso2.carbon.identity.api.user.session.common</artifactId>
         </dependency>
+
+        <!-- Server REST API Dependencies. -->
         <dependency>
-            <groupId>org.wso2.carbon.identity.user.api</groupId>
-            <artifactId>org.wso2.carbon.identity.rest.api.user.session.v1</artifactId>
+            <groupId>org.wso2.carbon.identity.server.api</groupId>
+            <artifactId>org.wso2.carbon.identity.api.server.common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon.identity.server.api</groupId>
+            <artifactId>org.wso2.carbon.identity.rest.api.server.challenge.v1</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon.identity.server.api</groupId>
+            <artifactId>org.wso2.carbon.identity.api.server.challenge.common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon.identity.server.api</groupId>
+            <artifactId>org.wso2.carbon.identity.rest.api.server.claim.management.v1</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon.identity.server.api</groupId>
+            <artifactId>org.wso2.carbon.identity.api.server.claim.management.common</artifactId>
         </dependency>
         <dependency>
             <groupId>org.wso2.carbon.identity.server.api</groupId>
             <artifactId>org.wso2.carbon.identity.rest.api.server.workflow.engine.v1</artifactId>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.wso2.carbon.identity.server.api</groupId>-->
-<!--            <artifactId>org.wso2.carbon.identity.rest.api.server.email.template.v1</artifactId>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>org.wso2.carbon.identity.server.api</groupId>-->
-<!--            <artifactId>org.wso2.carbon.identity.api.server.email.template.common</artifactId>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.wso2.carbon.identity.server.api</groupId>-->
+        <!--            <artifactId>org.wso2.carbon.identity.rest.api.server.email.template.v1</artifactId>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.wso2.carbon.identity.server.api</groupId>-->
+        <!--            <artifactId>org.wso2.carbon.identity.api.server.email.template.common</artifactId>-->
+        <!--        </dependency>-->
     </dependencies>
 
 </project>
