@@ -25,6 +25,7 @@
     <import resource="classpath:META-INF/cxf/session-user-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/user-fido2-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/user-totp-v1-cxf.xml"/>
+    <import resource="classpath:META-INF/cxf/permission-management-v1-cxf.xml"/>
     <!--<import resource="classpath:META-INF/cxf/workflow-engine-server-v1-cxf.xml"/>-->
     <import resource="classpath:META-INF/cxf/claim-management-server-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/challenge-server-v1-cxf.xml"/>
