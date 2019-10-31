@@ -30,7 +30,7 @@
     <import resource="classpath:META-INF/cxf/claim-management-server-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/challenge-server-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/email-template-server-v1-cxf.xml"/>
-    <!--<import resource="classpath:META-INF/cxf/applications-server-v1-cxf.xml"/>-->
+    <import resource="classpath:META-INF/cxf/applications-server-v1-cxf.xml"/>
 
     <import resource="classpath:META-INF/cxf/identity-governance-server-v1-cxf.xml"/>
     <context:property-placeholder/>
@@ -49,7 +49,7 @@
             <bean class="org.wso2.carbon.identity.rest.api.server.claim.management.v1.ClaimManagementApi"/>
             <bean class="org.wso2.carbon.identity.rest.api.server.email.template.v1.EmailApi"/>
             <bean class="org.wso2.carbon.identity.api.server.identity.governance.v1.IdentityGovernanceApi"/>
-<!--            <bean class="org.wso2.carbon.identity.api.server.application.management.v1.ApplicationsApi"/>-->
+            <bean class="org.wso2.carbon.identity.api.server.application.management.v1.ApplicationsApi"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
