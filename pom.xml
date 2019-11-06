@@ -318,6 +318,16 @@
                 <version>${identity.server.api.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.wso2.carbon.identity.server.api</groupId>
+                <artifactId>org.wso2.carbon.identity.api.server.idp.v1</artifactId>
+                <version>${identity.server.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.server.api</groupId>
+                <artifactId>org.wso2.carbon.identity.api.server.idp.common</artifactId>
+                <version>${identity.server.api.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.hibernate.validator</groupId>
                 <artifactId>hibernate-validator</artifactId>
                 <version>6.0.17.Final</version>
@@ -440,7 +450,7 @@
         <maven.buildnumber.plugin.version>1.4</maven.buildnumber.plugin.version>
         <org.apache.felix.annotations.version>1.2.4</org.apache.felix.annotations.version>
         <identity.user.api.version>1.0.50</identity.user.api.version>
-        <identity.server.api.version>1.0.37</identity.server.api.version>
+        <identity.server.api.version>1.0.47</identity.server.api.version>
         <carbon.p2.plugin.version>1.5.3</carbon.p2.plugin.version>
         <maven.findbugsplugin.version>3.0.4</maven.findbugsplugin.version>
     </properties>
