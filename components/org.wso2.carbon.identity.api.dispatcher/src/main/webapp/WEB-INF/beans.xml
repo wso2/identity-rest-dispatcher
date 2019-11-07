@@ -75,7 +75,7 @@
             <!--<bean class="org.wso2.carbon.identity.rest.api.user.challenge.v1.UserIdApi"/>-->
             <!--<bean class="org.wso2.carbon.identity.rest.api.user.session.v1.UserIdApi"/>-->
             <!--<bean class="org.wso2.carbon.identity.rest.api.user.authorized.apps.v1.UserIdApi"/>-->
-            <!--<bean class="org.wso2.carbon.identity.rest.api.user.association.v1.UserIdApi"/>-->
+            <bean class="org.wso2.carbon.identity.rest.api.user.association.v1.UserIdApi"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider">
