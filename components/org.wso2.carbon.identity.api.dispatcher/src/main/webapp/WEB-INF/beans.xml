@@ -52,6 +52,13 @@
             <bean class="org.wso2.carbon.identity.api.server.application.management.v1.ApplicationsApi"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
+            <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider">
+                <constructor-arg>
+                    <bean class="com.fasterxml.jackson.databind.ObjectMapper">
+                        <property name="serializationInclusion" value="NON_NULL" />
+                    </bean>
+                </constructor-arg>
+            </bean>
             <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
             <bean class="org.wso2.carbon.identity.api.dispatcher.JsonProcessingExceptionMapper"/>
             <bean class="org.wso2.carbon.identity.api.dispatcher.APIErrorExceptionMapper"/>
