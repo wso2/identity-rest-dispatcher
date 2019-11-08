@@ -28,7 +28,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>identity-api-dispatcher</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.21-SNAPSHOT</version>
+    <version>1.0.24-SNAPSHOT</version>
     <name>WSO2 Identity API Dispatcher Module</name>
     <description>
 
@@ -243,6 +243,16 @@
                 <artifactId>org.wso2.carbon.identity.api.user.approval.common</artifactId>
                 <version>${identity.user.api.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.user.api</groupId>
+                <artifactId>org.wso2.carbon.identity.api.user.application.common</artifactId>
+                <version>${identity.user.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.user.api</groupId>
+                <artifactId>org.wso2.carbon.identity.rest.api.user.application.v1</artifactId>
+                <version>${identity.user.api.version}</version>
+            </dependency>
 
             <!-- Server REST API Dependencies. -->
             <dependency>
@@ -333,16 +343,16 @@
                 <version>${identity.server.api.version}</version>
             </dependency>
 
-<!--            <dependency>-->
-<!--                <groupId>org.wso2.carbon.identity.server.api</groupId>-->
-<!--                <artifactId>org.wso2.carbon.identity.api.server.application.management.common</artifactId>-->
-<!--                <version>${identity.server.api.version}</version>-->
-<!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>org.wso2.carbon.identity.server.api</groupId>-->
-<!--                <artifactId>org.wso2.carbon.identity.api.server.application.management.v1</artifactId>-->
-<!--                <version>${identity.server.api.version}</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>org.wso2.carbon.identity.server.api</groupId>
+                <artifactId>org.wso2.carbon.identity.api.server.application.management.common</artifactId>
+                <version>${identity.server.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.server.api</groupId>
+                <artifactId>org.wso2.carbon.identity.api.server.application.management.v1</artifactId>
+                <version>${identity.server.api.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.wso2.carbon.identity.server.api</groupId>
                 <artifactId>org.wso2.carbon.identity.api.server.keystore.v1</artifactId>
@@ -449,8 +459,8 @@
         <junit.version>4.12</junit.version>
         <maven.buildnumber.plugin.version>1.4</maven.buildnumber.plugin.version>
         <org.apache.felix.annotations.version>1.2.4</org.apache.felix.annotations.version>
-        <identity.user.api.version>1.0.50</identity.user.api.version>
-        <identity.server.api.version>1.0.35</identity.server.api.version>
+        <identity.user.api.version>1.0.51</identity.user.api.version>
+        <identity.server.api.version>1.0.37</identity.server.api.version>
         <carbon.p2.plugin.version>1.5.3</carbon.p2.plugin.version>
         <maven.findbugsplugin.version>3.0.4</maven.findbugsplugin.version>
     </properties>

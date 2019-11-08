@@ -22,7 +22,7 @@
         <groupId>org.wso2.carbon.identity.rest.dispatcher</groupId>
         <artifactId>identity-api-dispatcher</artifactId>
         <relativePath>../../pom.xml</relativePath>
-        <version>1.0.21-SNAPSHOT</version>
+        <version>1.0.24-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>org.wso2.carbon.identity.rest.api.dispatcher</artifactId>
@@ -208,6 +208,14 @@
             <groupId>org.wso2.carbon.identity.user.api</groupId>
             <artifactId>org.wso2.carbon.identity.api.user.session.common</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon.identity.user.api</groupId>
+            <artifactId>org.wso2.carbon.identity.api.user.application.common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon.identity.user.api</groupId>
+            <artifactId>org.wso2.carbon.identity.rest.api.user.application.v1</artifactId>
+        </dependency>
 
         <!-- Server REST API Dependencies. -->
         <dependency>
@@ -250,15 +258,14 @@
             <groupId>org.wso2.carbon.identity.server.api</groupId>
             <artifactId>org.wso2.carbon.identity.api.server.email.template.common</artifactId>
         </dependency>
-
-<!--        <dependency>-->
-<!--            <groupId>org.wso2.carbon.identity.server.api</groupId>-->
-<!--            <artifactId>org.wso2.carbon.identity.api.server.application.management.common</artifactId>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>org.wso2.carbon.identity.server.api</groupId>-->
-<!--            <artifactId>org.wso2.carbon.identity.api.server.application.management.v1</artifactId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>org.wso2.carbon.identity.server.api</groupId>
+            <artifactId>org.wso2.carbon.identity.api.server.application.management.common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon.identity.server.api</groupId>
+            <artifactId>org.wso2.carbon.identity.api.server.application.management.v1</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.wso2.carbon.identity.server.api</groupId>
             <artifactId>org.wso2.carbon.identity.api.server.keystore.v1</artifactId>
