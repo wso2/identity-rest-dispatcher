@@ -28,7 +28,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>identity-api-dispatcher</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.17-SNAPSHOT</version>
+    <version>1.0.23-SNAPSHOT</version>
     <name>WSO2 Identity API Dispatcher Module</name>
     <description>
 
@@ -267,6 +267,16 @@
             </dependency>
             <dependency>
                 <groupId>org.wso2.carbon.identity.server.api</groupId>
+                <artifactId>org.wso2.carbon.identity.api.server.identity.governance.v1</artifactId>
+                <version>${identity.server.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.server.api</groupId>
+                <artifactId>org.wso2.carbon.identity.api.server.identity.governance.common</artifactId>
+                <version>${identity.server.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.server.api</groupId>
                 <artifactId>org.wso2.carbon.identity.api.server.challenge.common</artifactId>
                 <version>${identity.server.api.version}</version>
             </dependency>
@@ -322,27 +332,27 @@
                 <artifactId>hibernate-validator</artifactId>
                 <version>6.0.17.Final</version>
             </dependency>
-            <!--            <dependency>-->
-            <!--                <groupId>org.wso2.carbon.identity.server.api</groupId>-->
-            <!--                <artifactId>org.wso2.carbon.identity.rest.api.server.email.template.v1</artifactId>-->
-            <!--                <version>${identity.server.api.version}</version>-->
-            <!--            </dependency>-->
-            <!--            <dependency>-->
-            <!--                <groupId>org.wso2.carbon.identity.server.api</groupId>-->
-            <!--                <artifactId>org.wso2.carbon.identity.api.server.email.template.common</artifactId>-->
-            <!--                <version>${identity.server.api.version}</version>-->
-            <!--            </dependency>-->
+            <dependency>
+                <groupId>org.wso2.carbon.identity.server.api</groupId>
+                <artifactId>org.wso2.carbon.identity.rest.api.server.email.template.v1</artifactId>
+                <version>${identity.server.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.server.api</groupId>
+                <artifactId>org.wso2.carbon.identity.api.server.email.template.common</artifactId>
+                <version>${identity.server.api.version}</version>
+            </dependency>
 
-<!--            <dependency>-->
-<!--                <groupId>org.wso2.carbon.identity.server.api</groupId>-->
-<!--                <artifactId>org.wso2.carbon.identity.api.server.application.management.common</artifactId>-->
-<!--                <version>${identity.server.api.version}</version>-->
-<!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>org.wso2.carbon.identity.server.api</groupId>-->
-<!--                <artifactId>org.wso2.carbon.identity.api.server.application.management.v1</artifactId>-->
-<!--                <version>${identity.server.api.version}</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>org.wso2.carbon.identity.server.api</groupId>
+                <artifactId>org.wso2.carbon.identity.api.server.application.management.common</artifactId>
+                <version>${identity.server.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.server.api</groupId>
+                <artifactId>org.wso2.carbon.identity.api.server.application.management.v1</artifactId>
+                <version>${identity.server.api.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -440,7 +450,7 @@
         <maven.buildnumber.plugin.version>1.4</maven.buildnumber.plugin.version>
         <org.apache.felix.annotations.version>1.2.4</org.apache.felix.annotations.version>
         <identity.user.api.version>1.0.51</identity.user.api.version>
-        <identity.server.api.version>1.0.29</identity.server.api.version>
+        <identity.server.api.version>1.0.37</identity.server.api.version>
         <carbon.p2.plugin.version>1.5.3</carbon.p2.plugin.version>
         <maven.findbugsplugin.version>3.0.4</maven.findbugsplugin.version>
     </properties>

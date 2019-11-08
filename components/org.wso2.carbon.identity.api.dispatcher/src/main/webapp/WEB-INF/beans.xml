@@ -29,10 +29,11 @@
     <!--<import resource="classpath:META-INF/cxf/workflow-engine-server-v1-cxf.xml"/>-->
     <import resource="classpath:META-INF/cxf/claim-management-server-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/challenge-server-v1-cxf.xml"/>
-    <!--<import resource="classpath:META-INF/cxf/email-template-server-v1-cxf.xml"/>-->
-    <!--<import resource="classpath:META-INF/cxf/applications-server-v1-cxf.xml"/>-->
+    <import resource="classpath:META-INF/cxf/email-template-server-v1-cxf.xml"/>
+    <import resource="classpath:META-INF/cxf/applications-server-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/application-user-v1-cxf.xml"/>
 
+    <import resource="classpath:META-INF/cxf/identity-governance-server-v1-cxf.xml"/>
     <context:property-placeholder/>
     <context:annotation-config/>
     <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer"/>
@@ -47,10 +48,18 @@
         <jaxrs:serviceBeans>
             <bean class="org.wso2.carbon.identity.rest.api.server.challenge.v1.ChallengesApi"/>
             <bean class="org.wso2.carbon.identity.rest.api.server.claim.management.v1.ClaimManagementApi"/>
-            <!--<bean class="org.wso2.carbon.identity.rest.api.server.email.template.v1.EmailApi"/>-->
-<!--            <bean class="org.wso2.carbon.identity.api.server.application.management.v1.ApplicationsApi"/>-->
+            <bean class="org.wso2.carbon.identity.rest.api.server.email.template.v1.EmailApi"/>
+            <bean class="org.wso2.carbon.identity.api.server.identity.governance.v1.IdentityGovernanceApi"/>
+            <bean class="org.wso2.carbon.identity.api.server.application.management.v1.ApplicationsApi"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
+            <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider">
+                <constructor-arg>
+                    <bean class="com.fasterxml.jackson.databind.ObjectMapper">
+                        <property name="serializationInclusion" value="NON_NULL" />
+                    </bean>
+                </constructor-arg>
+            </bean>
             <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
             <bean class="org.wso2.carbon.identity.api.dispatcher.JsonProcessingExceptionMapper"/>
             <bean class="org.wso2.carbon.identity.api.dispatcher.APIErrorExceptionMapper"/>
