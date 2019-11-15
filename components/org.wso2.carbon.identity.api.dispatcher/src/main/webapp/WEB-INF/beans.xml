@@ -32,6 +32,7 @@
     <import resource="classpath:META-INF/cxf/email-template-server-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/applications-server-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/application-user-v1-cxf.xml"/>
+    <import resource="classpath:META-INF/cxf/keystore-server-v1-cxf.xml"/>
 
     <import resource="classpath:META-INF/cxf/identity-governance-server-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/user-store-v1-cxf.xml"/>
@@ -54,6 +55,7 @@
             <bean class="org.wso2.carbon.identity.api.server.application.management.v1.ApplicationsApi"/>
             <bean class="org.wso2.carbon.identity.api.server.userstore.v1.UserstoresApi"/>
             <bean class="org.wso2.carbon.identity.api.server.permission.management.v1.PermissionManagementApi"/>
+            <bean class="org.wso2.carbon.identity.api.server.keystore.management.v1.KeystoresApi"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider">
