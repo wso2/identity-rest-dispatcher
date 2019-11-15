@@ -22,7 +22,7 @@
         <groupId>org.wso2.carbon.identity.rest.dispatcher</groupId>
         <artifactId>identity-api-dispatcher</artifactId>
         <relativePath>../../pom.xml</relativePath>
-        <version>1.0.24-SNAPSHOT</version>
+        <version>1.0.31-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>org.wso2.carbon.identity.rest.api.dispatcher</artifactId>
@@ -268,12 +268,20 @@
         </dependency>
         <dependency>
             <groupId>org.wso2.carbon.identity.server.api</groupId>
-            <artifactId>org.wso2.carbon.identity.api.server.keystore.v1</artifactId>
+            <artifactId>org.wso2.carbon.identity.api.server.userstore.v1</artifactId>
         </dependency>
         <dependency>
             <groupId>org.wso2.carbon.identity.server.api</groupId>
-            <artifactId>org.wso2.carbon.identity.api.server.keystore.common</artifactId>
+            <artifactId>org.wso2.carbon.identity.api.server.userstore.common</artifactId>
         </dependency>
-    </dependencies>
+        <dependency>
+            <groupId>org.wso2.carbon.identity.server.api</groupId>
+            <artifactId>org.wso2.carbon.identity.api.server.keystore.management.v1</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon.identity.server.api</groupId>
+            <artifactId>org.wso2.carbon.identity.api.server.keystore.management.common</artifactId>
+        </dependency>
+        </dependencies>
 
 </project>
