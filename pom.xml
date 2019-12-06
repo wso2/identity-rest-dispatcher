@@ -343,6 +343,16 @@
                 <artifactId>org.wso2.carbon.identity.api.server.application.management.v1</artifactId>
                 <version>${identity.server.api.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.server.api</groupId>
+                <artifactId>org.wso2.carbon.identity.api.server.image.service.v1</artifactId>
+                <version>${identity.server.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.server.api</groupId>
+                <artifactId>org.wso2.carbon.identity.api.server.image.service.common</artifactId>
+                <version>${identity.server.api.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
