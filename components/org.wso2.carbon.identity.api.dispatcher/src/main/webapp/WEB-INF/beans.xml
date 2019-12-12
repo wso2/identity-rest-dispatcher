@@ -36,6 +36,7 @@
     <import resource="classpath:META-INF/cxf/idp-server-v1-cxf.xml"/>
 
     <import resource="classpath:META-INF/cxf/identity-governance-server-v1-cxf.xml"/>
+    <import resource="classpath:META-INF/cxf/image-service-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/user-store-v1-cxf.xml"/>
     <context:property-placeholder/>
     <context:annotation-config/>
@@ -54,6 +55,7 @@
             <bean class="org.wso2.carbon.identity.rest.api.server.email.template.v1.EmailApi"/>
             <bean class="org.wso2.carbon.identity.api.server.identity.governance.v1.IdentityGovernanceApi"/>
             <bean class="org.wso2.carbon.identity.api.server.application.management.v1.ApplicationsApi"/>
+            <bean class="org.wso2.carbon.identity.api.server.image.service.v1.ImagesApi"/>
             <bean class="org.wso2.carbon.identity.api.server.userstore.v1.UserstoresApi"/>
             <bean class="org.wso2.carbon.identity.api.server.permission.management.v1.PermissionManagementApi"/>
             <bean class="org.wso2.carbon.identity.api.server.keystore.management.v1.KeystoresApi"/>
