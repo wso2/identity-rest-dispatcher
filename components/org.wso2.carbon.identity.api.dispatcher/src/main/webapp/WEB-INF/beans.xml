@@ -34,6 +34,7 @@
     <import resource="classpath:META-INF/cxf/application-user-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/keystore-server-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/idp-server-v1-cxf.xml"/>
+    <import resource="classpath:META-INF/cxf/user-recovery-v1-cxf.xml"/>
 
     <import resource="classpath:META-INF/cxf/identity-governance-server-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/user-store-v1-cxf.xml"/>
@@ -87,6 +88,7 @@
             <bean class="org.wso2.carbon.identity.rest.api.user.fido2.v1.MeApi"/>
             <bean class="org.wso2.carbon.identity.rest.api.user.totp.v1.MeApi"/>
             <bean class="org.wso2.carbon.identity.rest.api.user.application.v1.MeApi"/>
+            <bean class="org.wso2.carbon.identity.rest.api.user.recovery.v1.RecoveryApi"/>
             <!--/users/v1/{user-id}/ APIs are not exposed in IS-5.9.0-->
             <!--<bean class="org.wso2.carbon.identity.rest.api.user.challenge.v1.UserIdApi"/>-->
             <!--<bean class="org.wso2.carbon.identity.rest.api.user.session.v1.UserIdApi"/>-->
