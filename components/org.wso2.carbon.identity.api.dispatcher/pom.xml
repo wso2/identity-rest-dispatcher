@@ -299,5 +299,4 @@
             <artifactId>org.wso2.carbon.identity.api.server.idp.common</artifactId>
         </dependency>
         </dependencies>
-
 </project>
