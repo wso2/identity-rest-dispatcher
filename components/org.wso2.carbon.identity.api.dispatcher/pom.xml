@@ -22,7 +22,7 @@
         <groupId>org.wso2.carbon.identity.rest.dispatcher</groupId>
         <artifactId>identity-api-dispatcher</artifactId>
         <relativePath>../../pom.xml</relativePath>
-        <version>1.0.50-SNAPSHOT</version>
+        <version>1.0.53-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>org.wso2.carbon.identity.rest.api.dispatcher</artifactId>
@@ -185,6 +185,14 @@
             <artifactId>org.wso2.carbon.identity.rest.api.user.fido2.v1</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.wso2.carbon.identity.user.api</groupId>
+            <artifactId>org.wso2.carbon.identity.rest.api.user.recovery.v1</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon.identity.user.api</groupId>
+            <artifactId>org.wso2.carbon.identity.api.user.recovery.commons</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.wso2.carbon.identity.server.api</groupId>
             <artifactId>org.wso2.carbon.identity.api.server.identity.governance.v1</artifactId>
         </dependency>
@@ -299,5 +307,4 @@
             <artifactId>org.wso2.carbon.identity.api.server.oidc.scope.management.common</artifactId>
         </dependency>
         </dependencies>
-
 </project>
