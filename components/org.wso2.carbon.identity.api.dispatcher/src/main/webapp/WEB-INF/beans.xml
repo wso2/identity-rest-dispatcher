@@ -34,6 +34,7 @@
     <import resource="classpath:META-INF/cxf/application-user-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/keystore-server-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/idp-server-v1-cxf.xml"/>
+    <import resource="classpath:META-INF/cxf/oidc-scope-management-server-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/user-recovery-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/script-libraries-server-v1-cxf.xml"/>
 
@@ -60,6 +61,7 @@
             <bean class="org.wso2.carbon.identity.api.server.permission.management.v1.PermissionManagementApi"/>
             <bean class="org.wso2.carbon.identity.api.server.keystore.management.v1.KeystoresApi"/>
             <bean class="org.wso2.carbon.identity.api.server.idp.v1.IdentityProvidersApi"/>
+            <bean class="org.wso2.carbon.identity.api.server.oidc.scope.management.v1.OidcApi"/>
             <bean class="org.wso2.carbon.identity.api.server.script.library.v1.ScriptLibrariesApi"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
