@@ -93,10 +93,9 @@
             <bean class="org.wso2.carbon.identity.rest.api.user.totp.v1.MeApi"/>
             <bean class="org.wso2.carbon.identity.rest.api.user.application.v1.MeApi"/>
             <bean class="org.wso2.carbon.identity.rest.api.user.recovery.v1.RecoveryApi"/>
-            <!--/users/v1/{user-id}/ APIs are not exposed in IS-5.9.0-->
-            <!--<bean class="org.wso2.carbon.identity.rest.api.user.challenge.v1.UserIdApi"/>-->
-            <!--<bean class="org.wso2.carbon.identity.rest.api.user.session.v1.UserIdApi"/>-->
-            <!--<bean class="org.wso2.carbon.identity.rest.api.user.authorized.apps.v1.UserIdApi"/>-->
+            <bean class="org.wso2.carbon.identity.rest.api.user.challenge.v1.UserIdApi"/>
+            <bean class="org.wso2.carbon.identity.rest.api.user.session.v1.UserIdApi"/>
+            <bean class="org.wso2.carbon.identity.rest.api.user.authorized.apps.v1.UserIdApi"/>
             <bean class="org.wso2.carbon.identity.rest.api.user.association.v1.UserIdApi"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
