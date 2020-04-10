@@ -336,5 +336,13 @@
             <groupId>org.wso2.carbon.identity.server.api</groupId>
             <artifactId>org.wso2.carbon.identity.api.server.configs.common</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon.identity.server.api</groupId>
+            <artifactId>org.wso2.carbon.identity.api.server.tenant.management.common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon.identity.server.api</groupId>
+            <artifactId>org.wso2.carbon.identity.api.server.tenant.management.v1</artifactId>
+        </dependency>
         </dependencies>
 </project>
