@@ -28,7 +28,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>identity-api-dispatcher</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.86-SNAPSHOT</version>
+    <version>1.0.88-SNAPSHOT</version>
     <name>WSO2 Identity API Dispatcher Module</name>
     <description>
 
@@ -128,6 +128,21 @@
                 <groupId>org.apache.cxf</groupId>
                 <artifactId>cxf-rt-rs-service-description</artifactId>
                 <version>${cxf-bundle.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.olingo</groupId>
+                <artifactId>olingo-odata2-core-incubating</artifactId>
+                <version>${olingo-odata2.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>javax.ws.rs</groupId>
+                        <artifactId>javax.ws.rs-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>com.google.code.gson</groupId>
+                        <artifactId>gson</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -528,6 +543,7 @@
         <jackson-databind.version>2.9.9.3</jackson-databind.version>
         <jackson-dataformat-xml.version>2.9.9</jackson-dataformat-xml.version>
         <cxf-bundle.version>3.2.8</cxf-bundle.version>
+        <olingo-odata2.version>1.1.0</olingo-odata2.version>
         <jackson.version>1.9.13</jackson.version>
         <spring-web.version>5.1.1.RELEASE</spring-web.version>
         <swagger-jaxrs.version>1.5.20</swagger-jaxrs.version>
@@ -535,7 +551,7 @@
         <junit.version>4.12</junit.version>
         <maven.buildnumber.plugin.version>1.4</maven.buildnumber.plugin.version>
         <org.apache.felix.annotations.version>1.2.4</org.apache.felix.annotations.version>
-        <identity.user.api.version>1.1.0</identity.user.api.version>
+        <identity.user.api.version>1.1.1</identity.user.api.version>
         <identity.server.api.version>1.0.109</identity.server.api.version>
         <carbon.p2.plugin.version>1.5.3</carbon.p2.plugin.version>
         <maven.findbugsplugin.version>3.0.4</maven.findbugsplugin.version>
