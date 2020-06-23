@@ -253,6 +253,16 @@
                 <artifactId>org.wso2.carbon.identity.rest.api.user.application.v1</artifactId>
                 <version>${identity.user.api.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.user.api</groupId>
+                <artifactId>org.wso2.carbon.identity.api.user.biometric.device.handler.v1</artifactId>
+                <version>${identity.user.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.user.api</groupId>
+                <artifactId>org.wso2.carbon.identity.api.user.biometric.device.common</artifactId>
+                <version>${identity.user.api.version}</version>
+            </dependency>
 
             <!-- Server REST API Dependencies. -->
             <dependency>
@@ -413,6 +423,7 @@
                 <artifactId>org.wso2.carbon.identity.api.server.oidc.scope.management.common</artifactId>
                 <version>${identity.server.api.version}</version>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -509,7 +520,7 @@
         <junit.version>4.12</junit.version>
         <maven.buildnumber.plugin.version>1.4</maven.buildnumber.plugin.version>
         <org.apache.felix.annotations.version>1.2.4</org.apache.felix.annotations.version>
-        <identity.user.api.version>1.0.63</identity.user.api.version>
+        <identity.user.api.version>1.0.64-SNAPSHOT</identity.user.api.version>
         <identity.server.api.version>1.0.66</identity.server.api.version>
         <carbon.p2.plugin.version>1.5.3</carbon.p2.plugin.version>
         <maven.findbugsplugin.version>3.0.4</maven.findbugsplugin.version>
