@@ -68,6 +68,7 @@
             <bean class="org.wso2.carbon.identity.api.server.oidc.scope.management.v1.OidcApi"/>
             <bean class="org.wso2.carbon.identity.api.server.script.library.v1.ScriptLibrariesApi"/>
             <bean class="org.wso2.carbon.identity.api.server.tenant.management.v1.TenantsApi"/>
+            <bean class="org.wso2.carbon.identity.api.server.tenant.management.v1.ChannelVerifiedTenantsApi"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider">
