@@ -2,7 +2,7 @@
 
 |  Branch | Build Status | Travis CI Status |
 | :------------ |:------------- |:-------------
-| master      | [![Build Status](https://wso2.org/jenkins/job/platform-builds/job/identity-rest-dispatcher/badge/icon)](https://wso2.org/jenkins/job/platform-builds/job/identity-rest-dispatcher/) | [![Travis CI Status](https://travis-ci.org/wso2/identity-rest-dispatcher.svg?branch=master)](https://travis-ci.org/wso2/identity-rest-dispatcher?branch=master)|
+| master      | [![Build Status](https://img.shields.io/jenkins/build?jobUrl=https%3A%2F%2Fwso2.org%2Fjenkins%2Fjob%2Fplatform-builds%2Fjob%2Fidentity-rest-dispatcher%2F)](https://wso2.org/jenkins/job/platform-builds/job/identity-rest-dispatcher/) | [![Travis CI Status](https://travis-ci.org/wso2/identity-rest-dispatcher.svg?branch=master)](https://travis-ci.org/wso2/identity-rest-dispatcher?branch=master)|
 
 Aggregates the API implementations from [identity-api-user](https://github.com/wso2/identity-api-user/) and 
 [identity-api-server](https://github.com/wso2/identity-api-server/) builds a single webapp inorder to expose the 
