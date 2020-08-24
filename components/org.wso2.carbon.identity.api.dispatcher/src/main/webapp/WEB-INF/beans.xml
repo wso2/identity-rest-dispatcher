@@ -44,6 +44,7 @@
     <import resource="classpath:META-INF/cxf/user-store-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/tenant-management-server-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/cors-server-v1-cxf.xml"/>
+    <import resource="classpath:META-INF/cxf/user-functionality-v1-cxf.xml"/>
     <context:property-placeholder/>
     <context:annotation-config/>
     <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer"/>
@@ -106,6 +107,8 @@
             <bean class="org.wso2.carbon.identity.rest.api.user.session.v1.UserIdApi"/>
             <bean class="org.wso2.carbon.identity.rest.api.user.authorized.apps.v1.UserIdApi"/>
             <bean class="org.wso2.carbon.identity.rest.api.user.association.v1.UserIdApi"/>
+            <bean class="org.wso2.carbon.identity.rest.api.user.functionality.v1.UserIdApi"/>
+            <bean class="org.wso2.carbon.identity.rest.api.user.functionality.v1.MeApi"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider">
