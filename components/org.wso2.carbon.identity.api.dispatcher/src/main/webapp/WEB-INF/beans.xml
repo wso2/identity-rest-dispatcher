@@ -45,7 +45,7 @@
     <import resource="classpath:META-INF/cxf/tenant-management-server-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/cors-server-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/user-functionality-v1-cxf.xml"/>
-
+    <import resource="classpath:META-INF/cxf/rfc-server-v1-cxf.xml"/>
     <context:property-placeholder/>
     <context:annotation-config/>
     <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer"/>
@@ -73,6 +73,7 @@
             <bean class="org.wso2.carbon.identity.api.server.tenant.management.v1.TenantsApi"/>
             <bean class="org.wso2.carbon.identity.api.server.tenant.management.v1.ChannelVerifiedTenantsApi"/>
             <bean class="org.wso2.carbon.identity.api.server.cors.v1.CorsApi"/>
+            <bean class="org.wso2.carbon.identity.api.server.fetch.remote.v1.RemoteFetchApi"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider">
