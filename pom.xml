@@ -240,6 +240,11 @@
             </dependency>
             <dependency>
                 <groupId>org.wso2.carbon.identity.user.api</groupId>
+                <artifactId>org.wso2.carbon.identity.rest.api.user.authorized.apps.v2</artifactId>
+                <version>${identity.user.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.user.api</groupId>
                 <artifactId>org.wso2.carbon.identity.rest.api.user.session.v1</artifactId>
                 <version>${identity.user.api.version}</version>
             </dependency>
