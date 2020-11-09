@@ -23,8 +23,8 @@
     <import resource="classpath:META-INF/cxf/user-association-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/user-approval-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/authorized-apps-user-v1-cxf.xml"/>
-    <import resource="classpath:META-INF/cxf/session-user-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/authorized-apps-user-v2-cxf.xml"/>
+    <import resource="classpath:META-INF/cxf/session-user-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/user-fido2-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/user-totp-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/permission-management-v1-cxf.xml"/>
@@ -139,7 +139,7 @@
             <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider">
                 <constructor-arg>
                     <bean class="com.fasterxml.jackson.databind.ObjectMapper">
-                        <property name="serializationInclusion" value="NON_NULL"/>
+                        <property name="serializationInclusion" value="NON_NULL" />
                     </bean>
                 </constructor-arg>
             </bean>
@@ -151,6 +151,7 @@
         <jaxrs:inInterceptors>
             <ref bean="validationInInterceptor"/>
         </jaxrs:inInterceptors>
+    </jaxrs:server>
     <cxf:bus>
         <cxf:properties>
             <entry key="search.query.parameter.name" value="filter"/>
