@@ -23,6 +23,7 @@
     <import resource="classpath:META-INF/cxf/user-association-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/user-approval-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/authorized-apps-user-v1-cxf.xml"/>
+    <import resource="classpath:META-INF/cxf/authorized-apps-user-v2-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/session-user-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/user-fido2-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/user-totp-v1-cxf.xml"/>
@@ -111,6 +112,28 @@
             <bean class="org.wso2.carbon.identity.rest.api.user.association.v1.UserIdApi"/>
             <bean class="org.wso2.carbon.identity.rest.api.user.functionality.v1.UserIdApi"/>
             <bean class="org.wso2.carbon.identity.rest.api.user.functionality.v1.MeApi"/>
+        </jaxrs:serviceBeans>
+        <jaxrs:providers>
+            <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider">
+                <constructor-arg>
+                    <bean class="com.fasterxml.jackson.databind.ObjectMapper">
+                        <property name="serializationInclusion" value="NON_NULL" />
+                    </bean>
+                </constructor-arg>
+            </bean>
+            <bean class="org.wso2.carbon.identity.api.dispatcher.JsonProcessingExceptionMapper"/>
+            <bean class="org.wso2.carbon.identity.api.dispatcher.APIErrorExceptionMapper"/>
+            <bean class="org.wso2.carbon.identity.api.dispatcher.InputValidationExceptionMapper"/>
+            <bean class="org.wso2.carbon.identity.api.dispatcher.DefaultExceptionMapper"/>
+        </jaxrs:providers>
+        <jaxrs:inInterceptors>
+            <ref bean="validationInInterceptor"/>
+        </jaxrs:inInterceptors>
+    </jaxrs:server>
+    <jaxrs:server id="usersV2" address="/users/v2">
+        <jaxrs:serviceBeans>
+            <bean class="org.wso2.carbon.identity.rest.api.user.authorized.apps.v2.MeApi"/>
+            <bean class="org.wso2.carbon.identity.rest.api.user.authorized.apps.v2.UserIdApi"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider">
