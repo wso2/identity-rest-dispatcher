@@ -211,7 +211,16 @@
                 <version>${org.apache.felix.annotations.version}</version>
                 <scope>provided</scope>
             </dependency>
-
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-logging</groupId>
+                <artifactId>commons-logging</artifactId>
+                <version>${commons.logging.version}</version>
+            </dependency>
             <!-- User REST API Dependencies. -->
             <dependency>
                 <groupId>org.wso2.carbon.identity.user.api</groupId>
@@ -377,6 +386,11 @@
                 <groupId>org.wso2.carbon.identity.server.api</groupId>
                 <artifactId>org.wso2.carbon.identity.api.server.idp.common</artifactId>
                 <version>${identity.server.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.validation</groupId>
+                <artifactId>validation-api</artifactId>
+                <version>${javax.validation.api.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.hibernate.validator</groupId>
@@ -594,6 +608,9 @@
         <spring-web.version>5.1.1.RELEASE</spring-web.version>
         <swagger-jaxrs.version>1.6.2</swagger-jaxrs.version>
         <javax.ws.rs-api.version>2.1.1</javax.ws.rs-api.version>
+        <javax.validation.api.version>2.0.1.Final</javax.validation.api.version>
+        <commons.logging.version>1.2</commons.logging.version>
+        <commons-lang3.version>3.4</commons-lang3.version>
         <junit.version>4.12</junit.version>
         <maven.buildnumber.plugin.version>1.4</maven.buildnumber.plugin.version>
         <org.apache.felix.annotations.version>1.2.4</org.apache.felix.annotations.version>
