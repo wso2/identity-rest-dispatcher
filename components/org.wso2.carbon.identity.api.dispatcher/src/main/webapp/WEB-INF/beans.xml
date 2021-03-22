@@ -48,6 +48,10 @@
     <import resource="classpath:META-INF/cxf/cors-server-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/user-functionality-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/rfc-server-v1-cxf.xml"/>
+
+    <!-- Legacy identity APIs   -->
+    <import resource="classpath:META-INF/cxf/config-mgt-server-v1-cxf.xml"/>
+
     <context:property-placeholder/>
     <context:annotation-config/>
     <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer"/>
@@ -154,6 +158,29 @@
             <ref bean="validationInInterceptor"/>
         </jaxrs:inInterceptors>
     </jaxrs:server>
+
+    <!-- Legacy identity APIs   -->
+    <jaxrs:server id="configMgt" address="/identity/config-mgt/v1.0">
+        <jaxrs:serviceBeans>
+            <bean class="org.wso2.carbon.identity.configuration.mgt.endpoint.ResourceApi"/>
+            <bean class="org.wso2.carbon.identity.configuration.mgt.endpoint.ResourceTypeApi"/>
+            <bean class="org.wso2.carbon.identity.configuration.mgt.endpoint.SearchApi"/>
+        </jaxrs:serviceBeans>
+        <jaxrs:providers>
+            <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
+            <bean class="org.apache.cxf.jaxrs.ext.search.SearchContextProvider"/>
+        </jaxrs:providers>
+    </jaxrs:server>
+    <jaxrs:server id="entitlement" address="/identity/entitlement/decision">
+        <jaxrs:serviceBeans>
+            <bean class="org.wso2.carbon.identity.entitlement.endpoint.resources.DecisionResource"/>
+        </jaxrs:serviceBeans>
+        <jaxrs:providers>
+            <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider"/>
+            <bean class="org.wso2.carbon.identity.entitlement.endpoint.filter.EntitlementExceptionMapper"/>
+        </jaxrs:providers>
+    </jaxrs:server>
+
     <cxf:bus>
         <cxf:properties>
             <entry key="search.query.parameter.name" value="filter"/>
