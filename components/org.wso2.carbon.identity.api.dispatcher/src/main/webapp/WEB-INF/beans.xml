@@ -48,6 +48,14 @@
     <import resource="classpath:META-INF/cxf/cors-server-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/user-functionality-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/rfc-server-v1-cxf.xml"/>
+
+    <!-- Legacy identity APIs   -->
+    <import resource="classpath:META-INF/cxf/config-mgt-server-v1-cxf.xml"/>
+    <import resource="classpath:META-INF/cxf/uma-permission-v1-cxf.xml"/>
+    <import resource="classpath:META-INF/cxf/uma-resource-v1-cxf.xml"/>
+    <import resource="classpath:META-INF/cxf/user-recovery-v0-9-cxf.xml"/>
+    <import resource="classpath:META-INF/cxf/user-governance-v1-cxf.xml"/>
+
     <context:property-placeholder/>
     <context:annotation-config/>
     <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer"/>
@@ -153,6 +161,78 @@
         <jaxrs:inInterceptors>
             <ref bean="validationInInterceptor"/>
         </jaxrs:inInterceptors>
+    </jaxrs:server>
+
+    <!-- Legacy identity APIs   -->
+    <jaxrs:server id="configMgt" address="/identity/config-mgt/v1.0">
+        <jaxrs:serviceBeans>
+            <bean class="org.wso2.carbon.identity.configuration.mgt.endpoint.ResourceApi"/>
+            <bean class="org.wso2.carbon.identity.configuration.mgt.endpoint.ResourceTypeApi"/>
+            <bean class="org.wso2.carbon.identity.configuration.mgt.endpoint.SearchApi"/>
+        </jaxrs:serviceBeans>
+        <jaxrs:providers>
+            <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
+            <bean class="org.apache.cxf.jaxrs.ext.search.SearchContextProvider"/>
+        </jaxrs:providers>
+    </jaxrs:server>
+    <jaxrs:server id="entitlement" address="/identity/entitlement/decision">
+        <jaxrs:serviceBeans>
+            <bean class="org.wso2.carbon.identity.entitlement.endpoint.resources.DecisionResource"/>
+        </jaxrs:serviceBeans>
+        <jaxrs:providers>
+            <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider"/>
+            <bean class="org.wso2.carbon.identity.entitlement.endpoint.filter.EntitlementExceptionMapper"/>
+        </jaxrs:providers>
+    </jaxrs:server>
+   <jaxrs:server id="umaPermission" address="/identity/oauth2/uma/permission/v1.0">
+        <jaxrs:serviceBeans>
+            <bean class="org.wso2.carbon.identity.oauth.uma.permission.endpoint.PermissionApi"/>
+        </jaxrs:serviceBeans>
+        <jaxrs:providers>
+            <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
+        </jaxrs:providers>
+    </jaxrs:server>
+    <jaxrs:server id="umaResource" address="/identity/oauth2/uma/resourceregistration/v1.0">
+        <jaxrs:serviceBeans>
+            <bean class="org.wso2.carbon.identity.oauth.uma.resource.endpoint.ResourceRegistrationApi"/>
+        </jaxrs:serviceBeans>
+        <jaxrs:providers>
+            <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
+        </jaxrs:providers>
+    </jaxrs:server>
+    <jaxrs:server id="recovery" address="/identity/recovery/v0.9">
+        <jaxrs:serviceBeans>
+            <bean class="org.wso2.carbon.identity.recovery.endpoint.ClaimsApi"/>
+            <bean class="org.wso2.carbon.identity.recovery.endpoint.RecoverPasswordApi"/>
+            <bean class="org.wso2.carbon.identity.recovery.endpoint.RecoverUsernameApi"/>
+            <bean class="org.wso2.carbon.identity.recovery.endpoint.SecurityQuestionApi"/>
+            <bean class="org.wso2.carbon.identity.recovery.endpoint.SecurityQuestionsApi"/>
+            <bean class="org.wso2.carbon.identity.recovery.endpoint.SetPasswordApi"/>
+            <bean class="org.wso2.carbon.identity.recovery.endpoint.ValidateAnswerApi"/>
+            <bean class="org.wso2.carbon.identity.recovery.endpoint.ValidateCodeApi"/>
+            <bean class="org.wso2.carbon.identity.recovery.endpoint.CaptchaApi"/>
+        </jaxrs:serviceBeans>
+        <jaxrs:providers>
+            <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
+            <bean class="org.wso2.carbon.identity.recovery.endpoint.filter.ResponseValidationFilter" />
+            <bean class="org.wso2.carbon.identity.recovery.endpoint.Exceptions.RecoveryEndpointExceptionMapper"/>
+        </jaxrs:providers>
+    </jaxrs:server>
+    <jaxrs:server id="userGovernance" address="/identity/user/v1.0">
+        <jaxrs:serviceBeans>
+            <bean class="org.wso2.carbon.identity.user.endpoint.IntrospectCodeApi"/>
+            <bean class="org.wso2.carbon.identity.user.endpoint.LiteApi"/>
+            <bean class="org.wso2.carbon.identity.user.endpoint.MeApi"/>
+            <bean class="org.wso2.carbon.identity.user.endpoint.PiInfoApi"/>
+            <bean class="org.wso2.carbon.identity.user.endpoint.ResendCodeApi"/>
+            <bean class="org.wso2.carbon.identity.user.endpoint.UpdateUsernameApi"/>
+            <bean class="org.wso2.carbon.identity.user.endpoint.ValidateCodeApi"/>
+            <bean class="org.wso2.carbon.identity.user.endpoint.ValidateUsernameApi"/>
+        </jaxrs:serviceBeans>
+        <jaxrs:providers>
+            <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
+            <bean class="org.wso2.carbon.identity.user.endpoint.exceptions.UserEndpointExceptionMapper"/>
+        </jaxrs:providers>
     </jaxrs:server>
     <cxf:bus>
         <cxf:properties>
