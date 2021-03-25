@@ -55,6 +55,7 @@
     <import resource="classpath:META-INF/cxf/uma-resource-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/user-recovery-v0-9-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/user-governance-v1-cxf.xml"/>
+    <import resource="classpath:META-INF/cxf/user-fido2-v2-cxf.xml"/>
 
     <context:property-placeholder/>
     <context:annotation-config/>
@@ -232,6 +233,19 @@
         <jaxrs:providers>
             <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
             <bean class="org.wso2.carbon.identity.user.endpoint.exceptions.UserEndpointExceptionMapper"/>
+        </jaxrs:providers>
+    </jaxrs:server>
+    <jaxrs:server id="fido2v2" address="/users/v2/me/webauthn">
+        <jaxrs:serviceBeans>
+            <bean class="org.wso2.carbon.identity.application.authenticator.fido2.endpoint.DefaultApi"/>
+            <bean class="org.wso2.carbon.identity.application.authenticator.fido2.endpoint.FinishRegistrationApi"/>
+            <bean class="org.wso2.carbon.identity.application.authenticator.fido2.endpoint.StartRegistrationApi"/>
+            <bean class="org.wso2.carbon.identity.application.authenticator.fido2.endpoint.StartUsernamelessRegistrationApi"/>
+            <bean class="org.wso2.carbon.identity.application.authenticator.fido2.endpoint.CredentialIdApi"/>
+
+        </jaxrs:serviceBeans>
+        <jaxrs:providers>
+            <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
         </jaxrs:providers>
     </jaxrs:server>
     <cxf:bus>
