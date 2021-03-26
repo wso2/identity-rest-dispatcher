@@ -1,0 +1,121 @@
+swagger: '2.0'
+info:
+  description: This is a Sample API
+  version: 'v1'
+  title: WSO2 Identity Server - Sample API Definition
+  contact:
+    name: 'WSO2 Identity Server'
+    url: 'https://wso2.com/identity-and-access-management/'
+    email: 'architecture@wso2.com'
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+
+schemes:
+  - https
+
+host: localhost:9443
+basePath: /t/{tenant-domain}/api/sample/v1
+
+
+# Applicable authentication mechanisms
+security:
+  - OAuth2: []
+  - BasicAuth: []
+
+paths:
+  /echo/{message}:
+    get:
+      description: Echo back the path string
+      summary: Echo back the query string
+      operationId: echo
+      parameters:
+        - $ref: '#/parameters/message'
+      produces:
+        - application/text
+      responses:
+        200:
+          description: Successfully retrieved the request
+          schema:
+            type: string
+        401:
+          $ref: '#/responses/Unauthorized'
+        403:
+          $ref: '#/responses/Forbidden'
+        404:
+          $ref: '#/responses/NotFound'
+        500:
+          $ref: '#/responses/ServerError'
+
+#-----------------------------------------------------
+# Descriptions of common responses
+#-----------------------------------------------------
+responses:
+  NotFound:
+    description: Resource Not Found
+  Unauthorized:
+    description: Unauthorized
+  ServerError:
+    description: Internal Server Error
+    schema:
+      $ref: '#/definitions/Error'
+  NotImplemented:
+    description: Not Implemented
+    schema:
+      $ref: '#/definitions/Error'
+  InvalidInput:
+    description: Invalid input request
+    schema:
+      $ref: '#/definitions/Error'
+  Forbidden:
+    description: Resource Forbidden
+  OK:
+    description: OK
+  NoContent:
+    description: No Content
+
+definitions:
+  #-----------------------------------------------------
+  # Error  object
+  #-----------------------------------------------------
+  Error:
+    type: object
+    required:
+      - code
+      - message
+    properties:
+      code:
+        type: string
+        example: "SSS-00000"
+      message:
+        type: string
+        example: "Some Error Message"
+      description:
+        type: string
+        example: "Some Error Description"
+      traceId:
+        type: string
+        example: "e0fbcfeb-3617-43c4-8dd0-7b7d38e13047"
+
+#--------------------
+# Parameters
+#--------------------
+parameters:
+  message:
+    in: path
+    name: message
+    description: Message
+    required: true
+    type: string
+
+#---------------------
+# Security Definitions
+#---------------------
+securityDefinitions:
+  BasicAuth:
+    type: basic
+  OAuth2:
+    type: oauth2
+    flow: accessCode
+    authorizationUrl: https://localhost:9443/oauth2/authorize
+    tokenUrl: https://localhost:9443/oauth2/token

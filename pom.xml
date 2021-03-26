@@ -120,6 +120,11 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>org.wso2.carbon.identity.rest.dispatcher</groupId>
+                <artifactId>org.wso2.carbon.identity.api.dispatcher.core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.apache.cxf</groupId>
                 <artifactId>cxf-rt-frontend-jaxrs</artifactId>
                 <version>${cxf-bundle.version}</version>
@@ -133,16 +138,6 @@
                 <groupId>org.apache.olingo</groupId>
                 <artifactId>olingo-odata2-core-incubating</artifactId>
                 <version>${olingo-odata2.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>javax.ws.rs</groupId>
-                        <artifactId>javax.ws.rs-api</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>com.google.code.gson</groupId>
-                        <artifactId>gson</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -163,32 +158,6 @@
                 <groupId>io.swagger</groupId>
                 <artifactId>swagger-jaxrs</artifactId>
                 <version>${swagger-jaxrs.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>com.fasterxml.jackson.core</groupId>
-                        <artifactId>jackson-databind</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>com.fasterxml.jackson.core</groupId>
-                        <artifactId>jackson-annotations</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>com.fasterxml.jackson.core</groupId>
-                        <artifactId>jackson-core</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>com.fasterxml.jackson.dataformat</groupId>
-                        <artifactId>jackson-dataformat-yaml</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>javax.ws.rs</groupId>
-                        <artifactId>jsr311-api</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>com.google.guava</groupId>
-                        <artifactId>guava</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
             <dependency>
                 <groupId>com.fasterxml.jackson.jaxrs</groupId>
@@ -206,12 +175,6 @@
                 <version>${jackson-databind.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>org.apache.felix.scr.ds-annotations</artifactId>
-                <version>${org.apache.felix.annotations.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>${commons-lang3.version}</version>
@@ -227,291 +190,12 @@
                 <artifactId>org.wso2.carbon.identity.api.user.common</artifactId>
                 <version>${identity.user.api.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.user.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.user.challenge.common</artifactId>
-                <version>${identity.user.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.user.api</groupId>
-                <artifactId>org.wso2.carbon.identity.rest.api.user.challenge.v1</artifactId>
-                <version>${identity.user.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.user.api</groupId>
-                <artifactId>org.wso2.carbon.identity.rest.api.user.association.v1</artifactId>
-                <version>${identity.user.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.user.api</groupId>
-                <artifactId>org.wso2.carbon.identity.rest.api.user.authorized.apps.v1</artifactId>
-                <version>${identity.user.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.user.api</groupId>
-                <artifactId>org.wso2.carbon.identity.rest.api.user.authorized.apps.v2</artifactId>
-                <version>${identity.user.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.user.api</groupId>
-                <artifactId>org.wso2.carbon.identity.rest.api.user.session.v1</artifactId>
-                <version>${identity.user.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.user.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.user.session.common</artifactId>
-                <version>${identity.user.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.user.api</groupId>
-                <artifactId>org.wso2.carbon.identity.rest.api.user.approval.v1</artifactId>
-                <version>${identity.user.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.user.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.user.approval.common</artifactId>
-                <version>${identity.user.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.user.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.user.application.common</artifactId>
-                <version>${identity.user.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.user.api</groupId>
-                <artifactId>org.wso2.carbon.identity.rest.api.user.application.v1</artifactId>
-                <version>${identity.user.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.user.api</groupId>
-                <artifactId>org.wso2.carbon.identity.rest.api.user.functionality.v1</artifactId>
-                <version>${identity.user.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.user.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.user.functionality.common</artifactId>
-                <version>${identity.user.api.version}</version>
-            </dependency>
 
 
             <!-- Server REST API Dependencies. -->
             <dependency>
                 <groupId>org.wso2.carbon.identity.server.api</groupId>
                 <artifactId>org.wso2.carbon.identity.api.server.common</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.rest.api.server.challenge.v1</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.server.identity.governance.v1</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.server.identity.governance.common</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.server.challenge.common</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.rest.api.server.claim.management.v1</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.server.claim.management.common</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.rest.api.server.workflow.engine.v1</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.wso2.carbon.identity.rest.dispatcher</groupId>
-                <artifactId>org.wso2.carbon.identity.rest.api.dispatcher</artifactId>
-                <version>${project.version}</version>
-                <type>war</type>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.user.api</groupId>
-                <artifactId>org.wso2.carbon.identity.rest.api.user.fido2.v1</artifactId>
-                <version>${identity.user.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.user.api</groupId>
-                <artifactId>org.wso2.carbon.identity.rest.api.user.totp.common</artifactId>
-                <version>${identity.user.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.user.api</groupId>
-                <artifactId>org.wso2.carbon.identity.rest.api.user.totp.v1</artifactId>
-                <version>${identity.user.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.user.api</groupId>
-                <artifactId>org.wso2.carbon.identity.rest.api.user.recovery.v1</artifactId>
-                <version>${identity.user.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.user.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.user.recovery.commons</artifactId>
-                <version>${identity.user.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.server.permission.management.v1</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.server.permission.management.common</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.server.idp.v1</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.server.idp.common</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>javax.validation</groupId>
-                <artifactId>validation-api</artifactId>
-                <version>${javax.validation.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.hibernate.validator</groupId>
-                <artifactId>hibernate-validator</artifactId>
-                <version>6.0.17.Final</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.jboss.logging</groupId>
-                        <artifactId>jboss-logging</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.rest.api.server.email.template.v1</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.server.email.template.common</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.server.application.management.common</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.server.application.management.v1</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.server.userstore.v1</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.server.userstore.common</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.server.keystore.management.v1</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.server.keystore.management.common</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.server.script.library.v1</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.server.script.library.common</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.server.oidc.scope.management.v1</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.server.oidc.scope.management.common</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.server.configs.v1</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.server.configs.common</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.server.tenant.management.common</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.server.tenant.management.v1</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.server.cors.common</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.server.cors.v1</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.server.fetch.remote.common</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.server.fetch.remote.v1</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.server.notification.sender.v1</artifactId>
-                <version>${identity.server.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.api.server.notification.sender.common</artifactId>
                 <version>${identity.server.api.version}</version>
             </dependency>
         </dependencies>
@@ -618,11 +302,13 @@
         <identity.server.api.version>1.0.225</identity.server.api.version>
         <carbon.p2.plugin.version>1.5.3</carbon.p2.plugin.version>
         <maven.findbugsplugin.version>3.0.4</maven.findbugsplugin.version>
+        <maven.checkstyleplugin.excludes>**/gen/**/*</maven.checkstyleplugin.excludes>
     </properties>
 
     <modules>
-        <module>components/org.wso2.carbon.identity.api.dispatcher</module>
-        <module>features/org.wso2.carbon.identity.api.dispatcher.feature</module>
+        <module>components/org.wso2.carbon.identity.api.dispatcher.core</module>
+        <module>sample/org.wso2.carbon.identity.rest.api.sample</module>
+        <module>sample/org.wso2.carbon.identity.api.dispatcher.sample</module>
     </modules>
 
 </project>
