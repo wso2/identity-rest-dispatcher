@@ -8,7 +8,7 @@
         <groupId>org.wso2.carbon.identity.rest.dispatcher</groupId>
         <artifactId>identity-api-dispatcher</artifactId>
         <version>1.0.164-SNAPSHOT</version>
-        <relativePath>../..</relativePath>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
 
     <artifactId>org.wso2.carbon.identity.rest.api.sample</artifactId>
