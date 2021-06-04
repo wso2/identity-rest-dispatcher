@@ -295,7 +295,7 @@
         <javax.validation.api.version>2.0.1.Final</javax.validation.api.version>
         <commons.logging.version>1.2</commons.logging.version>
         <commons-lang3.version>3.4</commons-lang3.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <maven.buildnumber.plugin.version>1.4</maven.buildnumber.plugin.version>
         <org.apache.felix.annotations.version>1.2.4</org.apache.felix.annotations.version>
         <identity.user.api.version>1.1.22</identity.user.api.version>
