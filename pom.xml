@@ -28,7 +28,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>identity-api-dispatcher</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.166-SNAPSHOT</version>
+    <version>1.0.167-SNAPSHOT</version>
     <name>WSO2 Identity API Dispatcher Module</name>
     <description>
 
@@ -187,6 +187,10 @@
                     <exclusion>
                         <groupId>com.google.guava</groupId>
                         <artifactId>guava</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>javax.validation</groupId>
+                        <artifactId>validation-api</artifactId>
                     </exclusion>
                 </exclusions>
             </dependency>
