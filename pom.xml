@@ -206,10 +206,10 @@
         <!--Maven Plugin Version-->
         <maven.compiler.plugin.version>2.3.1</maven.compiler.plugin.version>
         <maven.bundle.plugin.version>2.4.0</maven.bundle.plugin.version>
-        <jackson-jaxrs-json-provider.version>2.13.0</jackson-jaxrs-json-provider.version>
-        <jackson-databind.version>2.13.0</jackson-databind.version>
-        <jackson-dataformat-xml.version>2.13.0</jackson-dataformat-xml.version>
-        <cxf-bundle.version>3.4.5</cxf-bundle.version>
+        <jackson-jaxrs-json-provider.version>2.13.2</jackson-jaxrs-json-provider.version>
+        <jackson-databind.version>2.13.2.2</jackson-databind.version>
+        <jackson-dataformat-xml.version>2.13.2</jackson-dataformat-xml.version>
+        <cxf-bundle.version>3.5.0</cxf-bundle.version>
         <olingo-odata2.version>1.1.0</olingo-odata2.version>
         <jackson.version>1.9.13</jackson.version>
         <spring-web.version>5.3.19</spring-web.version>
@@ -220,8 +220,8 @@
         <commons-lang3.version>3.4</commons-lang3.version>
         <maven.buildnumber.plugin.version>1.4</maven.buildnumber.plugin.version>
         <org.apache.felix.annotations.version>1.2.4</org.apache.felix.annotations.version>
-        <identity.user.api.version>1.2.1</identity.user.api.version>
-        <identity.server.api.version>1.1.1</identity.server.api.version>
+        <identity.user.api.version>1.2.3</identity.user.api.version>
+        <identity.server.api.version>1.1.10</identity.server.api.version>
         <carbon.p2.plugin.version>1.5.3</carbon.p2.plugin.version>
         <maven.findbugsplugin.version>3.0.4</maven.findbugsplugin.version>
         <maven.checkstyleplugin.excludes>**/gen/**/*</maven.checkstyleplugin.excludes>
