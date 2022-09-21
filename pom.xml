@@ -213,7 +213,7 @@
         <olingo-odata2.version>1.1.0</olingo-odata2.version>
         <jackson.version>1.9.13</jackson.version>
         <spring-web.version>5.3.19</spring-web.version>
-        <swagger-jaxrs.version>1.6.2</swagger-jaxrs.version>
+        <swagger-jaxrs.version>1.6.6</swagger-jaxrs.version>
         <javax.ws.rs-api.version>2.1.1</javax.ws.rs-api.version>
         <javax.validation.api.version>2.0.1.Final</javax.validation.api.version>
         <commons.logging.version>1.2</commons.logging.version>
