@@ -207,8 +207,8 @@
         <maven.compiler.plugin.version>2.3.1</maven.compiler.plugin.version>
         <maven.bundle.plugin.version>2.4.0</maven.bundle.plugin.version>
         <jackson-jaxrs-json-provider.version>2.13.2</jackson-jaxrs-json-provider.version>
-        <jackson-databind.version>2.13.2.2</jackson-databind.version>
-        <jackson-dataformat-xml.version>2.14.0-rc2</jackson-dataformat-xml.version>
+        <jackson-databind.version>2.13.4.2</jackson-databind.version>
+        <jackson-dataformat-xml.version>2.13.2</jackson-dataformat-xml.version>
         <cxf-bundle.version>3.5.0</cxf-bundle.version>
         <olingo-odata2.version>1.1.0</olingo-odata2.version>
         <jackson.version>1.9.13</jackson.version>
