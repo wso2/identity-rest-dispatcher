@@ -61,6 +61,14 @@ public class APIErrorExceptionMapper implements ExceptionMapper<WebApplicationEx
 
             return buildResponse(response, status);
 
+        } else if (e instanceof org.wso2.carbon.identity.api.user.onboard.common.error.APIError) {
+            Object response = ((org.wso2.carbon.identity.api.user.onboard.common.error.APIError) e).getResponseEntity();
+            Response.Status status =
+                    getHttpsStatusCode(((org.wso2.carbon.identity.api.user.onboard.common.error.APIError)
+                    e).getCode(), ((org.wso2.carbon.identity.api.user.onboard.common.error.APIError) e).getStatus());
+
+            return buildResponse(response, status);
+
         }
         return e.getResponse();
     }
